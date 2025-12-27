@@ -1,0 +1,170 @@
+/* Style universal yang ngaruh ke semua elemen */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Times New Roman', Times, serif;
+}
+
+/* Gaya untuk body */
+body {
+    line-height: 1.6;
+    background-color: #eeeeee;
+    color: #333;
+    text-align: justify;
+}
+
+/* header */
+header {
+    background-color: #222;
+    color: #fff;
+    padding: 40px;
+    text-align: center;
+}
+
+/* section */
+section {
+    padding: 10px;
+    max-width: 900px;
+    margin: auto;
+}
+
+/* heading h2 */
+h2 {
+    margin-bottom: 20px;
+    border-bottom: 2px solid #ddd;
+    padding-bottom: 10px;
+}
+
+/* project */
+.project {
+    background: #fff;
+    padding: 20px;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    position: relative;
+}
+
+/* project span */
+.project span {
+    font-size: 0.9em;
+    color: #666;
+}
+/* tech */
+.tech {
+    margin-top: 10px;
+    font-weight: bold;
+    font-size: 0.9em;
+}
+
+/* list items */
+ul li {
+    margin-bottom: 8px; 
+    margin-left: 20px;  
+}
+
+/* footer */
+footer {
+    text-align: center;
+    padding: 20px;
+    background: #d3d3d3;
+    text-align: center;
+}
+
+/* link contact */
+.contactlink {
+    color: #000000;
+    text-decoration: none;
+}
+
+/* styling logo */
+.logo-wrapper {
+    position: absolute;
+    bottom: 20px;
+    right: 20px;
+    display: inline-block;
+}
+.logo-wrapper span {
+    color:#fff
+}
+.logo {
+    width: 30px;
+    height: 30px;
+    vertical-align: middle;
+    margin-top: 4px;
+    margin-right: 8px;
+    background-color: transparent;
+}
+.logo:hover {
+    transform: scale(1.05);
+}
+.logo-text{
+    position: absolute;
+    bottom: -40px;
+    left: 50%;
+    transform: translateX(-57%);
+    background: #000000;    
+    color: #ffffff;
+    padding: 6px 12px;
+    font-size: 12px;
+    border-radius: 6px;
+    white-space: nowrap;
+    opacity: 0s;
+    visibility: hidden;
+    transition: opacity 0.2s;
+}
+.logo-wrapper:hover .logo-text {
+    opacity: 1;
+    visibility: visible;
+}
+
+/* carousel logo */
+.carousel {
+    margin: 0 auto;
+    padding: 20px 0;
+    max-width: 95%;
+    overflow-x: auto;
+    display: flex;
+}
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+.group-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding-right: 1em;
+    will-change: transform;
+    animation: spin 15s infinite linear;
+}
+
+.cardlogo {
+    flex: 0 0 5;
+    height: 5em;   
+    display: flex;
+    padding: 1em;
+    padding-right: 1em;
+    align-items: center;
+    background: transparent;
+    align-content: center;
+    border-radius: .2em;
+}
+
+.cardlogo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+}
+
+.cardlogo img:hover {
+    transform: scale(1.05);
+}
+@keyframes spin {
+    0% {
+        transform: translateX(0);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}

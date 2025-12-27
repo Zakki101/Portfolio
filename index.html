@@ -4,7 +4,7 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muhammad Zakki Arifin | Software Portfolio</title>
-    <link rel="stylesheet" href="style.css" />
+    <link rel="stylesheet" href="css/style.css" />
 </head>
 
 <body>
@@ -33,11 +33,14 @@
             using HTML, CSS (Tailwind), and JavaScript.
         </p>
         <p class="tech">HTML · CSS · JavaScript</p>
-        <button onclick="window.location.href='https://github.com/Zakki101/CodingCamp-290925-Zakki101'">View on GitHub</button>
+        <a href = "https://github.com/Zakki101/CodingCamp-290925-Zakki101" class = "logo-wrapper">
+            <img src="asset/img/github-mark.svg" alt="GitHub Logo" class="logo"/>
+            <span class="logo-text">View on GitHub</span>
+        </a>
     </div>
 
     <div class="project">
-        <h3>Task List & Management Android App</h3>
+        <h3>Task List & Management Mobile App</h3>
         <span>Jul 2025 | Individual Project</span>
         <p>
             Developed a task management Android application with full CRUD functionality,
@@ -45,7 +48,10 @@
             deadline management features.
         </p>
         <p class="tech">Java · Android Studio · SQLite</p>
-        <button onclick="window.location.href='https://github.com/Zakki101/TugasKuAPK'">View on GitHub</button>
+        <a href = "https://github.com/Zakki101/TugasKuAPK" class = "logo-wrapper">
+            <img src="asset/img/github-mark.svg" alt="GitHub Logo" class="logo"/>
+            <span class="logo-text">View on GitHub</span>
+        </a>
     </div>
 
     <div class="project">
@@ -57,7 +63,10 @@
             history, and integration with a Node.js backend and MySQL database.
         </p>
         <p class="tech">Android · Node.js · MySQL</p>
-        <button onclick="window.location.href='https://github.com/Zakki101/CarrentixAPK'">View on GitHub</button>
+        <a href = "https://github.com/Zakki101/CarrentixAPK" class = "logo-wrapper">
+            <img src="asset/img/github-mark.svg" alt="GitHub Logo" class="logo"/>
+            <span class="logo-text">View on GitHub</span>
+        </a>
     </div>
 
     <div class="project">
@@ -69,7 +78,10 @@
             and interactive prototypes.
         </p>
         <p class="tech">Figma · UI/UX Design</p>
-        <button onclick="window.location.href='https://www.figma.com/design/79pnOIStHZCUb28tDlbvdF/UAS-Matakuliah-ADPL?node-id=0-1&t=kamWr4AD0JGVqqIF-1'">View on Figma</button>
+        <a href="https://www.figma.com/design/79pnOIStHZCUb28tDlbvdF/UAS-Matakuliah-ADPL?node-id=0-1&t=kamWr4AD0JGVqqIF-1" class="logo-wrapper">
+            <img src="asset/img/Figma-black.svg" alt="Figma Logo" class="logo"/>
+            <span class="logo-text">View on Figma</span>
+        </a>
     </div>
     </section>
 
@@ -84,25 +96,43 @@
 
     <section id="Technical skills">
         <h2>Technical Skills</h2>
-        <ul>
-        <li>Programming: Python, Java, JavaScript, SQL</li>
-        <li>Mobile Development: Android (Java)</li>
-        <li>Web Development: HTML, CSS, JavaScript</li>
-        <li>Database: MySQL, SQLite</li>
-        <li>Tools: GitHub, Android Studio, VS Code, Figma</li>
-        </ul>
+        <div class = "carousel">
+            <div class="group-logo">
+                <div class="cardlogo"> <img src = "asset/img/github-mark.svg" alt="GitHub Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/Figma-black.svg" alt="Figma Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/vscode.svg" alt="VsCode Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/android-studio-icon.svg" alt="Android Studio Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/mysql-svgrepo-com.svg" alt="MySQL Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/python-svgrepo-com.svg" alt="Python Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/css.svg" alt="CSS Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/html-5.svg" alt="HTML Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/javascript.svg" alt="JavaScript Logo"></div>
+            </div>
+            <div aria-hidden class="group-logo">
+                <div class="cardlogo"> <img src = "asset/img/github-mark.svg" alt="GitHub Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/Figma-black.svg" alt="Figma Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/vscode.svg" alt="VsCode Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/android-studio-icon.svg" alt="Android Studio Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/mysql-svgrepo-com.svg" alt="MySQL Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/python-svgrepo-com.svg" alt="Python Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/css.svg" alt="CSS Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/html-5.svg" alt="HTML Logo"></div>
+                <div class="cardlogo"> <img src = "asset/img/javascript.svg" alt="JavaScript Logo"></div>
+            </div>
+        </div>
     </section>
 
     <section id="contact">
         <h2>Contact</h2>
-        <p>Email: <a href="mailto:muhammadzakkiarifin@gmail.com">muhammadzakkiarifin@gmail.com</a></p>
-        <p>GitHub: <a href="https://github.com/Zakki101">https://github.com/Zakki101</a></p>
-        <p>LinkedIn: <a href="https://www.linkedin.com/in/muhammad-zakki-arifin-88b8b3285">https://www.linkedin.com/in/muhammad-zakki-arifin-88b8b3285</a></p>
+        <p>Email: <a class = "contactlink" href="mailto:muhammadzakkiarifin@gmail.com">muhammadzakkiarifin@gmail.com</a></p>
+        <p>GitHub: <a class = "contactlink" href="https://github.com/Zakki101">https://github.com/Zakki101</a></p>
+        <p>LinkedIn: <a class = "contactlink" href="https://www.linkedin.com/in/muhammad-zakki-arifin-88b8b3285">https://www.linkedin.com/in/muhammad-zakki-arifin-88b8b3285</a></p>
     </section>
 
     <footer>
         <p>© 2025 Muhammad Zakki Arifin</p>
     </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
