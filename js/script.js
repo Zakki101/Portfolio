@@ -1,3 +1,17 @@
+// Mobile menu toggle
+const mobileMenu = document.getElementById('mobile-menu');
+const mobileMenuClose = document.getElementById('mobile-menu-close');
+const navList = document.getElementById('nav-list');
+
+mobileMenu.addEventListener('click', () => {
+    navList.classList.add('active');
+});
+
+mobileMenuClose.addEventListener('click', () => {
+    navList.classList.remove('active');
+});
+
+
 // buat hover effect logo
 const logo = document.getElementById("logo");
 const text = document.getElementById("logoText");

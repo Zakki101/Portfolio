@@ -5,25 +5,37 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Muhammad Zakki Arifin | Software Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
+    <link href="https://cdn.jsdelivr.net/npm/remixicon@4.2.0/fonts/remixicon.css" rel="stylesheet">
 </head>
 
 <body>
-    <nav class = "navbar">
-        <div class="home-anchor">Muhammad Zakki Arifin</div>
-        <ul class = "nav-list">
-            <li><a href="#about">About Me</a></li>
-            <li><a href="#projects">Projects</a></li>
-            <li><a href="#Soft skills">Soft Skills</a></li>
-            <li><a href="#Technical skills">Technical Skills</a></li>
-            <li><a href="#contact">Contact</a></li>
-        </ul>
-    </nav>
-    <header>
-        <h1>Muhammad Zakki Arifin</h1>
-        <p>Informatics Undergraduate | Software Developer, Web Developer, UI/UX Designer</p>
+    <header class="header" id="header">
+        <nav class="nav">  
+            <div class="navbar-container" id="navbar-container">
+                <a href="#home" class="nav-home">Muhammad Zakki Arifin
+                </a>
+                <ul class="nav-list" id="nav-list">
+                    <li><a href="#about">About Me</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#Soft skills">Soft Skills</a></li>
+                    <li><a href="#Technical skills">Technical Skills</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="mobile-on" id="mobile-menu">
+                    <i class="ri-menu-3-line"></i>
+                </div>
+                <div class="mobile-off" id="mobile-menu-close">
+                    <i class="ri-close-large-line"></i>
+            </div>
+        </nav>
     </header>
 
-    <section id="about">
+    <div class = "page-aboutme" id="home">
+        <h1>Muhammad Zakki Arifin</h1>
+        <p>Informatics Undergraduate | Software Developer, Web Developer, UI/UX Designer</p>
+    </div>
+
+    <section class="about" id="about">
     <h2>About Me</h2>
         <p>
         Undergraduate Informatics student currently in the 6th semester, with interests and competencies in programming, particularly 
@@ -32,7 +44,7 @@
         </p>
     </section>
 
-    <section id="projects">
+    <section class="projects" id="projects">
         <h2>Projects</h2>
 
     <div class="project">
@@ -43,10 +55,12 @@
             using HTML, CSS (Tailwind), and JavaScript.
         </p>
         <p class="tech">HTML · CSS · JavaScript</p>
-        <a href = "https://github.com/Zakki101/CodingCamp-290925-Zakki101" class = "logo-wrapper">
-            <img src="asset/img/github-mark.svg" alt="GitHub Logo" class="logo"/>
-            <span class="logo-text">View on GitHub</span>
-        </a>
+        <button class="button-view">
+            <a  class = "logo-wrapper" href = "https://github.com/Zakki101/CodingCamp-290925-Zakki101">
+                <img class="logo" src="asset/img/github-mark.svg" alt="GitHub Logo" />
+                <span class="logo-text">View on GitHub</span>
+            </a>
+        </button>
     </div>
 
     <div class="project">
@@ -58,10 +72,12 @@
             deadline management features.
         </p>
         <p class="tech">Java · Android Studio · SQLite</p>
-        <a href = "https://github.com/Zakki101/TugasKuAPK" class = "logo-wrapper">
-            <img src="asset/img/github-mark.svg" alt="GitHub Logo" class="logo"/>
-            <span class="logo-text">View on GitHub</span>
-        </a>
+        <button class="button-view">
+            <a href = "https://github.com/Zakki101/TugasKuAPK" class = "logo-wrapper">
+                <img src="asset/img/github-mark.svg" alt="GitHub Logo" class="logo"/>
+                <span class="logo-text">View on GitHub</span>
+            </a>
+        </button>
     </div>
 
     <div class="project">
@@ -73,10 +89,12 @@
             history, and integration with a Node.js backend and MySQL database.
         </p>
         <p class="tech">Android · Node.js · MySQL</p>
-        <a href = "https://github.com/Zakki101/CarrentixAPK" class = "logo-wrapper">
-            <img src="asset/img/github-mark.svg" alt="GitHub Logo" class="logo"/>
-            <span class="logo-text">View on GitHub</span>
-        </a>
+        <button class="button-view">
+            <a href = "https://github.com/Zakki101/CarrentixAPK" class = "logo-wrapper">
+                <img src="asset/img/github-mark.svg" alt="GitHub Logo" class="logo"/>
+                <span class="logo-text">View on GitHub</span>
+            </a>
+        </button>
     </div>
 
     <div class="project">
@@ -88,23 +106,16 @@
             and interactive prototypes.
         </p>
         <p class="tech">Figma · UI/UX Design</p>
-        <a href="https://www.figma.com/design/79pnOIStHZCUb28tDlbvdF/UAS-Matakuliah-ADPL?node-id=0-1&t=kamWr4AD0JGVqqIF-1" class="logo-wrapper">
-            <img src="asset/img/Figma-black.svg" alt="Figma Logo" class="logo"/>
-            <span class="logo-text">View on Figma</span>
-        </a>
+        <button class="button-view">
+            <a href="https://www.figma.com/design/79pnOIStHZCUb28tDlbvdF/UAS-Matakuliah-ADPL?node-id=0-1&t=kamWr4AD0JGVqqIF-1" class="logo-wrapper">
+                <img src="asset/img/Figma-black.svg" alt="Figma Logo" class="logo"/>
+                <span class="logo-text">View on Figma</span>
+            </a>
+        </button>
     </div>
     </section>
 
-    <section id="Soft skills">
-        <h2>Soft Skills</h2>
-        <ul>
-        <li>Analytical Thinking</li>
-        <li>Team Collaboration</li>
-        <li>Attention to Detail</li>
-        </ul>
-    </section>
-
-    <section id="Technical skills">
+    <section class="technical-skills" id="Technical skills">
         <h2>Technical Skills</h2>
         <div class = "carousel">
             <div class="group-logo">
@@ -132,7 +143,7 @@
         </div>
     </section>
 
-    <section id="contact">
+    <section class="contact" id="contact">
         <h2>Contact</h2>
         <div class = "contact-wrapper">
             <a class = "contactlink" href="mailto:muhammadzakkiarifin@gmail.com">
