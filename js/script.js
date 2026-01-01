@@ -13,6 +13,7 @@ mobileMenuClose.addEventListener('click', () => {
 
 // Smooth scrolling pas link diklik
 const navLinks = document.querySelectorAll('.nav-list a');
+const homeSection = document.getElementById('home');
 navLinks.forEach(link => {
     link.addEventListener('click', (e) => {
         e.preventDefault();
@@ -22,6 +23,7 @@ navLinks.forEach(link => {
         navList.classList.remove('active'); // Close mobile menu on link click
     });
 });
+
 
 // Typing animation loop for nama
 const pauseBetweenLoops = 3000; // ms to pause after typing and before deleting
@@ -52,34 +54,3 @@ function typeWriterNama() {
 }
 // Start animation
 typeWriterNama();
-
-// const typingSpeed = 100; // ms per character
-// const pauseTime = 2000; // ms to pause after typing and before deleting
-// const rincianElement = document.querySelector('.rincian');
-
-// let index = 0;
-// let isDeleting = false;
-
-// function typeWriter() {
-//     if (!isDeleting) {
-//         rincianElement.textContent = text.substring(0, index + 1);
-//         index++;
-//         if (index === text.length) {
-//             isDeleting = true;
-//             setTimeout(typeWriter, pauseTime);
-//             return;
-//         }
-//     } else {
-//         rincianElement.textContent = text.substring(0, index);
-//         index--;
-//         if (index === 0) {
-//             isDeleting = false;
-//             setTimeout(typeWriter, pauseTime);
-//             return;
-//         }
-//     }
-//     setTimeout(typeWriter, typingSpeed);
-// }
-
-// // Start the animation
-// typeWriter();
