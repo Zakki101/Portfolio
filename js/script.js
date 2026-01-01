@@ -11,28 +11,75 @@ mobileMenuClose.addEventListener('click', () => {
     navList.classList.remove('active');
 });
 
+// Smooth scrolling pas link diklik
+const navLinks = document.querySelectorAll('.nav-list a');
+navLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+        e.preventDefault();
+        const targetId = link.getAttribute('href').substring(1);
+        const targetSection = document.getElementById(targetId);
+        targetSection.scrollIntoView({ behavior: 'smooth' });
+        navList.classList.remove('active'); // Close mobile menu on link click
+    });
+});
 
-// buat hover effect logo
-const logo = document.getElementById("logo");
-const text = document.getElementById("logoText");
-
-let holdTimer;
-
-/* Klik & tahan (mouse / touch) */
-logo.addEventListener("mousedown", showText);
-logo.addEventListener("mouseup", hideText);
-logo.addEventListener("mouseleave", hideText);
-
-/* Touch (Mobile) */
-logo.addEventListener("touchstart", showText);
-logo.addEventListener("touchend", hideText);
-logo.addEventListener("touchcancel", hideText);
-function showText() {
-    text.style.opacity = "1";
-    text.style.visibility = "visible";
+// Typing animation loop for nama
+const pauseBetweenLoops = 3000; // ms to pause after typing and before deleting
+const namaElement = document.querySelector('.nama');
+const fullText = namaElement.textContent;
+let charIndex = 0;
+let isDeletingNama = false;
+function typeWriterNama() {
+    if (!isDeletingNama) {
+        namaElement.textContent = fullText.substring(0, charIndex + 1);
+        charIndex++;
+        if (charIndex === fullText.length) {
+            isDeletingNama = true;
+            setTimeout(typeWriterNama, pauseBetweenLoops);
+            return;
+        }
+    } else {
+        namaElement.textContent = fullText.substring(0, charIndex);
+        charIndex--;
+        if (charIndex === 0) {
+            isDeletingNama = false;
+            namaElement.textContent = ''; 
+            setTimeout(typeWriterNama, pauseBetweenLoops);
+            return;
+        }
+    }
+    setTimeout(typeWriterNama, 100);
 }
+// Start animation
+typeWriterNama();
 
-function hideText() {
-    text.style.opacity = "0";
-    text.style.visibility = "hidden";
-}
+// const typingSpeed = 100; // ms per character
+// const pauseTime = 2000; // ms to pause after typing and before deleting
+// const rincianElement = document.querySelector('.rincian');
+
+// let index = 0;
+// let isDeleting = false;
+
+// function typeWriter() {
+//     if (!isDeleting) {
+//         rincianElement.textContent = text.substring(0, index + 1);
+//         index++;
+//         if (index === text.length) {
+//             isDeleting = true;
+//             setTimeout(typeWriter, pauseTime);
+//             return;
+//         }
+//     } else {
+//         rincianElement.textContent = text.substring(0, index);
+//         index--;
+//         if (index === 0) {
+//             isDeleting = false;
+//             setTimeout(typeWriter, pauseTime);
+//             return;
+//         }
+//     }
+//     setTimeout(typeWriter, typingSpeed);
+// }
+
+// // Start the animation
+// typeWriter();

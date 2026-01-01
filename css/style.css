@@ -15,10 +15,6 @@ body {
 }
 
 /* header (navbar) */
-header {
-    padding: 40px;
-    text-align: center;
-}
 nav {
     position: fixed;
     top: 0;
@@ -50,7 +46,7 @@ nav {
     transition: color 0.3s, transform 0.3s;
 }
 .nav-home:hover {
-    color: #ffffff;
+    color: #000000;
     transform: scale(1.05);
 }
 .nav-list {
@@ -73,25 +69,88 @@ nav {
 .mobile-on, .mobile-off {
     font-size: 1.8rem;
     cursor: pointer;
-    color: #000000;
+    color: #ffffff;
     display: none;
+    margin-right: 10px;
 }
-
+.mobile-on:hover, .mobile-off:hover {
+    color: black;
+}
 
 /* Page about me */
-.page-aboutme {
-    padding: 10px;
-    max-height: 100%;
-    max-width: 100%;
-    margin: auto;
-    text-align: center;
+.aboutme {
+    height: 100vh;
+    min-height: 600px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    text-align: left;
+    overflow: hidden;
+    background: linear-gradient(135deg, #d2e1fa 0%, #5199ff 50%, #d2e1fa 100%);
+    gap: 2rem;
+}
+.profile-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.profile {
+    width: 300px;
+    height: 300px;
+    border-radius: 50%;
+    align-self: center;
+    object-fit: cover;
+    box-shadow: 0 4px 8px rgba(14, 14, 14, 0.904);
+}
+.nama {
+    font-size: clamp(2.5rem, 5vw, 3.5rem);
+    font-weight: 800;
+    color: #000000;
+    margin-inline: auto;
+    white-space: normal;
+    overflow-wrap: break-word;
+    min-height: 1.6em;
+    align-items: center;
+}
+.nama::after {
+    content: '|';
+    color: #000000;
+    align-items: center;
+    position: absolute;
+    animation: blink 1s steps(1) infinite;
+}
+.rincian {
+    color: #334155;
+    font-size: 1.2rem;
+}
+/* animate blink */
+@keyframes blink {
+    0%, 50%, 100% { opacity: 1; }
+    25%, 75% { opacity: 0; }
 }
 
-/* section */
-section {
-    padding: 10px;
-    max-width: 900px;
-    margin: auto;
+/* Section Styles */
+.section {
+	padding: 8rem 5%;
+	max-width: 1200px;
+	margin: 0 auto;
+}
+.section-title {
+	text-align: center;
+	font-size: clamp(2.5rem, 5vw, 3.5rem);
+	font-weight: 800;
+	margin-bottom: 4rem;
+	color: #1e293b;
+	opacity: 0;
+	transform: translateY(30px);
+	transition: all 0.8s ease;
+	letter-spacing: -1px;
+}
+.section-title.animate {
+	opacity: 1;
+	transform: translateY(0);
 }
 
 /* heading h2 */
@@ -236,6 +295,7 @@ footer {
 
 /* Mobile Layout */
 @media screen and (max-width: 1150px) {
+    /* Mobile Nav layout*/
     .nav-list {
         display: none;
         position: absolute;
@@ -253,6 +313,10 @@ footer {
         padding: 1rem 0;
         align-items: flex-start;    
     }
+    .nav-home {
+        margin-left: 10px;
+    }
+    /* ubah kondisi nav pas dia buka menu */
     nav:has(.navbar-container .nav-list.active) {
         border-radius: 0%;
     }
@@ -267,5 +331,46 @@ footer {
     }
     .nav-list.active ~ .mobile-off {
         display: block;
+    }
+
+    /*Mobile profile layout*/
+    .profile {
+        width: 300px;
+        height: 300px;
+        margin-left: 20px;
+    }
+    .profile-container {
+        text-align: center;
+        margin-right: 20px;
+    }
+    .nama {
+        font-size: clamp(2rem, 7vw, 2rem);
+    }
+    .rincian {
+        font-size: 1em;
+    }
+}
+
+@media screen and (max-width: 720px) {
+    .profile {
+        width: 200px;
+        height: 200px;
+        margin-left: 0;
+    }
+    .aboutme {
+        flex-direction: column;
+        gap: 1.5rem;
+        padding: 2rem;
+    }
+    .profile-container {
+        text-align: center;
+        margin-right: 20px;
+        margin-left: 20px;
+    }
+    .nama {
+        font-size: clamp(2rem, 7vw, 2rem);
+    }
+    .rincian {
+        font-size: 1em;
     }
 }
