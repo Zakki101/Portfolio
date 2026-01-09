@@ -180,6 +180,7 @@ nav {
     position: relative;
     display: flex;
     flex-direction: column;
+    margin: 0 10rem;
     min-height: 100vh;
 }
 .about-wrapper {
@@ -191,12 +192,10 @@ nav {
     width: 300px;
     height: 300px;
     border-radius: 20px;
-    margin-left: 5rem;
     object-fit: cover;
     box-shadow: 0 4px 8px rgba(14, 14, 14, 0.904);
 }
 .about p{
-    margin-right: 5rem;
     font-size: 1.1rem;
     color: #000000;
     text-align: justify;
@@ -208,18 +207,59 @@ nav {
     padding: 3rem;
 }
 .technical-skills {
-    font-size: 2rem;
+    font-size: clamp(1rem, 5vw, 2rem);
     font-weight: 800;
     /* margin (top right bottom left) */
-    margin: 2rem 0 0 5rem;
+    margin: 2rem 0 0 0;
     color: #1e293b;
-    text-align: flex-start;
+}
+/* carousel logo */
+.carousel {
+    margin: 0 auto;
+    padding: 20px 40px;
+    max-width: 100%;
+    overflow-x: auto;
+    display: flex;
+}
+.carousel::-webkit-scrollbar{
+    display: none;
+}
+.group-logo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1em;
+    padding-right: 1em;
+    will-change: transform;
+    animation: spin 10s infinite linear;
+}
+.cardlogo {
+    flex: 0 0 5;
+    height: 5em;   
+    display: flex;
+    padding: 1em;
+    padding-right: 1em;
+    align-items: center;
+    background: transparent;
+    align-content: center;
+    border-radius: .2em;
+}
+.cardlogo img {
+    width: 50px;
+    height: 50px;
+    border-radius: 20%;
+}
+.cardlogo img:hover {
+    transform: scale(1.05);
+}
+@keyframes spin {
+    0% {transform: translateX(0);}
+    100% {transform: translateX(-100%);}
 }
 
 /* page projects */
 .projects {
     position: relative;
-    min-height: 100vh;
 }
 .projects-container {
     display: grid;
@@ -351,58 +391,12 @@ nav {
     transform: scale(1.05);
 }
 
-/* carousel logo */
-.carousel {
-    margin: 0 auto;
-    padding: 20px 40px;
-    max-width: 85%;
-    overflow-x: auto;
-    display: flex;
-}
-.carousel::-webkit-scrollbar{
-    display: none;
-}
-.group-logo {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 1em;
-    padding-right: 1em;
-    will-change: transform;
-    animation: spin 10s infinite linear;
-}
-.cardlogo {
-    flex: 0 0 5;
-    height: 5em;   
-    display: flex;
-    padding: 1em;
-    padding-right: 1em;
-    align-items: center;
-    background: transparent;
-    align-content: center;
-    border-radius: .2em;
-}
-.cardlogo img {
-    width: 50px;
-    height: 50px;
-    border-radius: 20%;
-}
-.cardlogo img:hover {
-    transform: scale(1.05);
-}
-@keyframes spin {
-    0% {transform: translateX(0);}
-    100% {transform: translateX(-100%);}
-}
-
 /* Contact Section */
 .contact {
-    max-width: 1200px;
-    margin: 6rem auto;
-    padding: 0 2rem;
+    position: relative;
 }
 .contact-me {
-    margin: 5rem;
+    margin: 5rem 16rem;
     background-color: #ffffff;
     border-radius: 20px;
     padding: 2.5rem;
